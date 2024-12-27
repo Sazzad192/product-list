@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Task - Product Listing with Cart Functionality
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This project implements a product listing and cart functionality UI based on the provided [Figma design](https://www.figma.com/design/x9iVC44evHLzfEUXrewfBH/Frontend-Task?node-id=0-278&t=Z4HcSkxtxoTfK9Nb-0). The application focuses on a clean, user-friendly interface and includes features such as product listing, cart management, pagination, search, and dark mode.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Core Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Fetch and Display Products**
 
-## Learn More
+   - Products are fetched from the [DummyJSON API](https://dummyjson.com/docs/products) and displayed in a clean, responsive list format.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Add to Cart Functionality**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Users can add products to the cart, with the cart state dynamically updating to reflect the "Added in Cart" status.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **State Management**
+   - Cart functionality is managed using **MobX** for a seamless and reactive user experience.
 
-## Deploy on Vercel
+### Additional Enhancements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Dark Mode Support**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - A fully functional dark mode toggle has been implemented for a better user experience in low-light environments.
+
+2. **Pagination**
+
+   - Pagination is implemented to load and navigate products in chunks, improving performance and user navigation.
+
+3. **Search and Filter**
+
+   - Users can search for products by name and filter them by category for easier navigation.
+
+4. **Toast Notifications**
+   - Feedback is provided to the user with toast notifications for actions like adding products to the cart.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- **React 19**: Core library for building the UI.
+- **Next.js 15**: Framework for server-side rendering and static site generation.
+- **Tailwind CSS**: For responsive and customizable styling.
+
+### State Management
+
+- **MobX**: For handling reactive global state.
+
+### API Handling
+
+- **Axios**: For making API requests.
+- **React Query**: For fetching, caching, and synchronizing server state in React applications.
+
+### Utility Libraries
+
+- **React Icons**: For implementing scalable and consistent icons.
+- **React Select**: For advanced dropdown components with custom styles.
+- **clsx & tailwind-merge**: For conditional class names and Tailwind class management.
+- **use-debounce**: For debouncing user inputs (e.g., search functionality).
+
+### Developer Tools
+
+- **React Query Devtools**: For debugging API calls and query states.
+- **PostCSS**: For advanced CSS transformations.
+
+---
+
+## Installation and Setup
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
