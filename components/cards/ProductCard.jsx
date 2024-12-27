@@ -29,7 +29,7 @@ function ProductCard({ item }) {
           height={250}
           src={item.thumbnail || "/placeholder.jpg"}
           alt={item.title}
-          className="w-28 md:w-52 h-[190px] md:h-[210px] object-fill transform transition-transform duration-300 rounded-lg"
+          className="w-28 md:w-52 h-[175px] md:h-[210px] object-fill transform transition-transform duration-300 rounded-lg"
           priority
         />
         <div

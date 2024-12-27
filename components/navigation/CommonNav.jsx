@@ -35,7 +35,11 @@ function CommonNav() {
             }}
             className="w-6 h-6 text-primary-500 block md:hidden"
           />
-          <Link href="/" aria-label="Go to homepage">
+          <Link
+            className="hidden md:block"
+            href="/"
+            aria-label="Go to homepage"
+          >
             <h1 className="text-2xl text-primary-500 dark:text-primary-400 font-bold">
               PRODUCT
             </h1>
@@ -64,7 +68,7 @@ function CommonNav() {
         <div className="col-span-1 flex justify-end gap-4">
           <button
             onClick={() => setRightSidebarOpen(true)}
-            className="relative flex items-center justify-center border-none md:border rounded-full p-2 md:p-4 bg-gray-100 dark:bg-gray-800 shadow-sm md:shadow-lg transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="relative flex items-center justify-center border-none md:border rounded-full p-2 md:p-4 bg-none md:bg-gray-100 dark:md:bg-gray-800 shadow-sm md:shadow-lg transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
           >
             <BsCartPlus className="w-5 h-5 text-gray-700 dark:text-gray-300" />
 

@@ -37,7 +37,10 @@ function RightSideDrawer({ open, setOpen, children, ...props }) {
                     PRODUCT
                   </h1>
                 </Link>
-                <button onClick={() => setOpen(false)}>
+                <button
+                  className="text-white dark:text-black"
+                  onClick={() => setOpen(false)}
+                >
                   <span className="sr-only">Close menu</span>x
                 </button>
               </div>

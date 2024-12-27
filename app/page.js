@@ -85,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* page filters */}
-      <section className="flex justify-between items-center gap-4">
+      <section className="flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="w-full md:w-3/4">
           <SearchInput
             onChange={(e) => {
@@ -105,7 +105,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="w-1/4">
+        <div className="w-full md:w-1/4">
           <ReactCustomSelect
             label="Filter By Category"
             placeholder="Select Category"
@@ -131,7 +131,7 @@ export default function Home() {
         <section className="mt-1 text-grey-600 flex items-center gap-x-2">
           Showing results for{" "}
           {params.q ? (
-            <div className="flex items-center gap-1 border rounded-full px-2 py-1 text-xs bg-primary-100">
+            <div className="flex items-center gap-1 border rounded-full px-2 py-1 text-xs bg-primary-100 text-white dark:text-black">
               <p>{params.q}</p>
               <MdOutlineCancel
                 onClick={() => {
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
           ) : null}
           {params.category ? (
-            <div className="flex items-center gap-1 border rounded-full px-2 py-1 text-xs bg-primary-100">
+            <div className="flex items-center gap-1 border rounded-full px-2 py-1 text-xs bg-primary-100 text-white dark:text-black">
               <p>{params.category}</p>
               <MdOutlineCancel
                 onClick={() =>
@@ -168,7 +168,7 @@ export default function Home() {
           <Spinner />
         </section>
       ) : (
-        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
           {allProduct.products.map((item) => (
             <ProductCard item={item} key={item.id} />
           ))}
