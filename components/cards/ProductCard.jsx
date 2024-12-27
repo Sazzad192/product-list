@@ -97,16 +97,19 @@ function ProductCard({ item }) {
 
       <div className="p-2">
         <div className="space-y-1">
-          <p className="text-sm">{item.title}</p>
-          <p className="font-medium truncate">{item.description}</p>
+          <p className="text-sm text-dark-700">{item.title}</p>
+          <p className="font-medium truncate text-dark-900">
+            {item.description}
+          </p>
         </div>
-        <p className="font-medium text-primary-500">
-          <span className="font-bold text-xl">৳</span>{" "}
-          {priceAfterDiscount.toFixed(2)}{" "}
-          <span className="text-sm text-dark-500 line-through font-normal">
-            {item.price}
-          </span>
-        </p>
+        <div className="flex justify-start items-center gap-4">
+          <p className="font-medium text-base md:text-xl text-primary-500">
+            ৳ {priceAfterDiscount.toFixed(2)}{" "}
+          </p>
+          <p className="text-sm text-dark-500 line-through font-normal">
+            ৳ {item.price}
+          </p>
+        </div>
       </div>
     </div>
   );

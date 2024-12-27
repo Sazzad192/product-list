@@ -16,6 +16,8 @@
   --color-green-500: #03A629;
 
   /* Neutral colors */
+  --color-dark-900: #1A2B3D;
+  --color-dark-700: #5A6573;
   --color-dark-500: #77818c;
   --color-dark: #1a2b3d;
   --background-color: #ffffff; /* White background for light mode */
@@ -36,8 +38,10 @@
   --color-green-500: #03A629;
 
   /* Neutral colors */
-  --background-color: #121212;
+  --color-dark-900: #1A2B3D;
+  --color-dark-700: #5A6573;
   --color-dark-500: #77818c;
+  --background-color: #121212;
   --text-color: #ffffff;
 }
 

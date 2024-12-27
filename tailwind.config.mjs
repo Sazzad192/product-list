@@ -28,6 +28,8 @@ export default {
           500: "var(--color-green-500)",
         },
         dark: {
+          900: "var(--color-dark-900)",
+          700: "var(--color-dark-700)",
           500: "var(--color-dark-500)",
         },
       },

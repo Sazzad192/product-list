@@ -1,18 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Toast from "@/components/providers/Toast";
+import { Murecho } from "@next/font/google";
 import CommonNav from "@/components/navigation/CommonNav";
 import TanstackProvider from "@/components/providers/TanstackProvider";
 import { CartProvider } from "./context/CartContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const murecho = Murecho({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Include all weights
 });
 
 export const metadata = {
@@ -23,11 +17,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
-      >
+      <body className={`${murecho.className} h-full`}>
         <TanstackProvider>
-          <Toast />
           <CartProvider>
             <CommonNav />
             <main className="min-h-[calc(100vh-180px)] px-5 lg:px-32 py-4">
