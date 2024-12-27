@@ -15,7 +15,7 @@ export default function UserInfoBox() {
             <p className="text-sm font-semibold text-gray-700 truncate max-w-full">
               K.M. Sazzadul Islam
             </p>
-            <p className="text-secondary-500 font-medium text-xs truncate max-w-full">
+            <p className="text-orange-500 font-medium text-xs truncate max-w-full">
               Admin
             </p>
           </div>
@@ -35,7 +35,7 @@ export default function UserInfoBox() {
             <Menu.Item>
               {({ active }) => (
                 <div>
-                  <Button className="flex items-center w-full gap-2 p-2 text-sm font-medium text-center text-gray-600 bg-white hover:bg-gray-100">
+                  <Button className="flex items-center w-full gap-2 p-2 text-sm font-medium text-center text-gray-600 bg-white dark:bg-white hover:bg-gray-100">
                     Logout
                     <AiOutlineLogout className="w-4 h-4" />
                   </Button>

@@ -7,10 +7,17 @@ import UserInfoBox from "./UserInfoBox";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import MobileSidebar from "./MobileSidebar";
 import DarkModeToggle from "./DarlModeToggle";
+import RightSideDrawer from "../RightSideDrawer";
+import CartSummary from "../CartSummary";
+import { BsCartPlus } from "react-icons/bs";
+import { useCartStore } from "@/app/context/CartContext";
+import { observer } from "mobx-react";
 
-export default function CommonNav() {
+function CommonNav() {
   const pathName = usePathname();
+  const cartStore = useCartStore();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
 
   return (
     <header className="border-b w-full">
@@ -55,10 +62,28 @@ export default function CommonNav() {
 
         {/* User Info Section */}
         <div className="col-span-1 flex justify-end gap-4">
+          <button
+            onClick={() => setRightSidebarOpen(true)}
+            className="relative flex items-center justify-center border-none md:border rounded-full p-0 md:p-4  md:dark:bg-gray-800 md:shadow-lg transition-all duration-300"
+          >
+            <BsCartPlus className="w-5 h-5" />
+            <p className="absolute top-1 right-0 text-xs rounded-full p-1 text-primary-500 bg-primary-100">
+              {cartStore.cart.length}
+            </p>
+          </button>
           <DarkModeToggle />
           <UserInfoBox />
         </div>
       </nav>
+
+      <RightSideDrawer
+        open={rightSidebarOpen}
+        setOpen={() => setRightSidebarOpen(false)}
+      >
+        <CartSummary />
+      </RightSideDrawer>
     </header>
   );
 }
+
+export default observer(CommonNav);

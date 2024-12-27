@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "orange-dark-gradient": "linear-gradient(to bottom, #D66F00, #F7B166)",
+        "orange-bold-gradient": "linear-gradient(to left, #FFA03B, #F27D00)",
+      },
       colors: {
         primary: {
           500: "var(--color-primary-500)",
@@ -16,10 +20,15 @@ export default {
           200: "var(--color-primary-200)",
           100: "var(--color-primary-100)",
         },
-        secondary: {
-          500: "var(--color-secondary-500)",
-          400: "var(--color-secondary-400)",
-          300: "var(--color-secondary-300)",
+        orange: {
+          500: "var(--color-orange-500)",
+          400: "var(--color-orange-300)",
+        },
+        green: {
+          500: "var(--color-green-500)",
+        },
+        dark: {
+          500: "var(--color-dark-500)",
         },
       },
     },
