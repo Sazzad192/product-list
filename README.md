@@ -4,6 +4,8 @@
 
 This project implements a product listing and cart functionality UI based on the provided [Figma design](https://www.figma.com/design/x9iVC44evHLzfEUXrewfBH/Frontend-Task?node-id=0-278&t=Z4HcSkxtxoTfK9Nb-0). The application focuses on a clean, user-friendly interface and includes features such as product listing, cart management, pagination, search, and dark mode.
 
+Live demo: [Click Here](https://task-product-list.vercel.app/)
+
 ---
 
 ## Features
@@ -35,9 +37,6 @@ This project implements a product listing and cart functionality UI based on the
 
    - Users can search for products by name and filter them by category for easier navigation.
 
-4. **Toast Notifications**
-   - Feedback is provided to the user with toast notifications for actions like adding products to the cart.
-
 ---
 
 ## Tech Stack
@@ -68,12 +67,3 @@ This project implements a product listing and cart functionality UI based on the
 
 - **React Query Devtools**: For debugging API calls and query states.
 - **PostCSS**: For advanced CSS transformations.
-
----
-
-## Installation and Setup
-
-1. Clone the repository:
-   ```bash
-   git clone <repository_url>
-   ```
