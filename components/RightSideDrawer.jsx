@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { MdOutlineCancel } from "react-icons/md";
 
 function RightSideDrawer({ open, setOpen, children, ...props }) {
   return (
@@ -37,11 +38,9 @@ function RightSideDrawer({ open, setOpen, children, ...props }) {
                     PRODUCT
                   </h1>
                 </Link>
-                <button
-                  className="text-white dark:text-black"
-                  onClick={() => setOpen(false)}
-                >
-                  <span className="sr-only">Close menu</span>x
+                <button onClick={() => setOpen(false)}>
+                  <span className="sr-only">Close menu</span>{" "}
+                  <MdOutlineCancel className="w-5 h-5 text-dark-700" />
                 </button>
               </div>
               <div className="px-4 flex-grow">{children}</div>

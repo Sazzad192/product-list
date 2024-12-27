@@ -22,7 +22,7 @@ function CartSummary() {
 
   return (
     <div className="">
-      <h2 className="text-lg font-bold text-primary-500 mb-4">Cart Summary</h2>
+      <h2 className="text-lg font-bold text-primary-300 mb-4">Cart Summary</h2>
       <p className="text-sm text-dark-500 mb-4">
         Items in Cart: {cartStore.cartCount}
       </p>

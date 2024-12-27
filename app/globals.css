@@ -4,7 +4,7 @@
 /* Base styles */
 :root {
   /* Primary color palette */
-  --color-primary-500: #1882ff;
+  --color-primary-500: #1882ff; 
   --color-primary-400: #479aff;
   --color-primary-300: #75b2ff;
   --color-primary-200: #a3caff;
@@ -14,13 +14,13 @@
   --color-orange-300: #f7b166;
 
   --color-green-500: #03A629;
-
   /* Neutral colors */
   --color-dark-900: #1A2B3D;
   --color-dark-700: #5A6573;
-  --color-dark-500: #77818c;
-  --color-dark: #1a2b3d;
-  --background-color: #ffffff; /* White background for light mode */
+  --color-dark-500: #77818C;
+  --color-dark: #1A2B3D;
+  --background-color: #ffffff;
+  --text-color: #000000;
 }
 
 /* Dark mode variables */
@@ -32,18 +32,20 @@
   --color-primary-200: #a9c9f7;
   --color-primary-100: #dce9fc;
 
-  --color-orange-500: #d66f00;
-  --color-orange-300: #f7b166;
+  --color-orange-500: #f2994a;
+  --color-orange-300: #f7c488;
 
-  --color-green-500: #03A629;
+  --color-green-500: #03a629; 
 
   /* Neutral colors */
-  --color-dark-900: #1A2B3D;
-  --color-dark-700: #5A6573;
-  --color-dark-500: #77818c;
+  --color-dark-900: #5A6573;
+  --color-dark-700: #d1d7df;
+  --color-dark-500: #77818C;
+  --color-dark: #0f172a;
   --background-color: #121212;
-  --text-color: #ffffff;
+  --text-color: #e5e5e5;
 }
+
 
 /* Apply global styles */
 body {
