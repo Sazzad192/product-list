@@ -4,7 +4,7 @@
 
 This project implements a product listing and cart functionality UI based on the provided [Figma design](https://www.figma.com/design/x9iVC44evHLzfEUXrewfBH/Frontend-Task?node-id=0-278&t=Z4HcSkxtxoTfK9Nb-0). The application focuses on a clean, user-friendly interface and includes features such as product listing, cart management, pagination, search, and dark mode.
 
-Live link: [Click Here](https://task-product-list.vercel.app/)
+Live demo: [Click Here](https://task-product-list.vercel.app/)
 
 ---
 
