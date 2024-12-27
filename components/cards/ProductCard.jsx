@@ -6,6 +6,7 @@ import Button from "../buttons/Button";
 import { LuEye } from "react-icons/lu";
 import { BsCartPlus } from "react-icons/bs";
 import { IoHeartOutline } from "react-icons/io5";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 function ProductCard({ item }) {
   const cartStore = useCartStore();
@@ -17,30 +18,48 @@ function ProductCard({ item }) {
   const cartItem = cartStore.cart.find((cartItem) => cartItem.id === item.id);
 
   return (
-    <div className="relative group hover:border flex flex-col gap-2 max-w-[209px] p-1 rounded-lg lg:hover:rounded-lg hover:shadow-md cursor-pointer">
+    <div
+      className={`relative group flex flex-col gap-2 max-w-[209px] p-1 rounded-lg ${
+        isInCart ? "border rounded-lg shadow-md" : ""
+      } hover:border lg:hover:rounded-lg hover:shadow-md cursor-pointer`}
+    >
       <div className="relative">
         <Image
           width={250}
           height={250}
           src={item.thumbnail || "/placeholder.jpg"}
           alt={item.title}
-          className="w-28 md:w-52 h-[125px] md:h-[210px] object-fill transform transition-transform duration-300 rounded-lg"
+          className="w-28 md:w-52 h-[190px] md:h-[210px] object-fill transform transition-transform duration-300 rounded-lg"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-lg"></div>
+        <div
+          className={`absolute inset-0 bg-black bg-opacity-0 ${
+            isInCart ? "bg-opacity-50" : ""
+          } group-hover:bg-opacity-50 transition-all duration-300 rounded-lg`}
+        ></div>
 
         <IoHeartOutline className="absolute top-4 right-[10px] text-white w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-        <div className="absolute bottom-3 opacity-0 group-hover:opacity-100 px-3 w-full space-y-2">
+        <div
+          className={`absolute bottom-3 opacity-0 ${
+            isInCart ? "opacity-100" : ""
+          } group-hover:opacity-100 px-3 w-full space-y-2`}
+        >
           {isInCart ? (
-            <div className="flex justify-between items-center bg-green-500 text-white py-2 px-3 rounded-lg">
+            <div className="flex justify-between items-center bg-green-500 text-white py-2 px-1 md:px-3 rounded-lg">
               <button
                 className="font-bold text-xl"
                 onClick={() => cartStore.decrementQuantity(item.id)}
               >
-                -
+                {cartItem?.quantity > 1 ? (
+                  "-"
+                ) : (
+                  <RiDeleteBin6Line className="w-4 h-4" />
+                )}
               </button>
-              <p className="text-sm">{cartItem?.quantity} Added in Cart</p>
+              <p className="text-[11px] md:text-sm">
+                {cartItem?.quantity} Added in Cart
+              </p>
               <button
                 className="font-bold text-xl"
                 onClick={() => cartStore.incrementQuantity(item.id)}

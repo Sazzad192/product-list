@@ -64,13 +64,17 @@ function CommonNav() {
         <div className="col-span-1 flex justify-end gap-4">
           <button
             onClick={() => setRightSidebarOpen(true)}
-            className="relative flex items-center justify-center border-none md:border rounded-full p-0 md:p-4  md:dark:bg-gray-800 md:shadow-lg transition-all duration-300"
+            className="relative flex items-center justify-center border-none md:border rounded-full p-2 md:p-4 bg-gray-100 dark:bg-gray-800 shadow-sm md:shadow-lg transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
           >
-            <BsCartPlus className="w-5 h-5" />
-            <p className="absolute top-1 right-0 text-xs rounded-full p-1 text-primary-500 bg-primary-100">
-              {cartStore.cart.length}
-            </p>
+            <BsCartPlus className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+
+            {cartStore.cart.length > 0 && (
+              <span className="absolute -top-2 -right-2 text-xs rounded-full p-1 px-2 text-white bg-primary-500">
+                {cartStore.cart.length}
+              </span>
+            )}
           </button>
+
           <DarkModeToggle />
           <UserInfoBox />
         </div>
