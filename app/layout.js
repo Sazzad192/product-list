@@ -1,5 +1,6 @@
 import "./globals.css";
-import { Murecho } from "@next/font/google";
+import { Murecho } from "next/font/google";
+// import { Murecho } from "@next/font/google";
 import CommonNav from "@/components/navigation/CommonNav";
 import TanstackProvider from "@/components/providers/TanstackProvider";
 import { CartProvider } from "./context/CartContext";
